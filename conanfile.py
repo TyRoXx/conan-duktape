@@ -22,11 +22,10 @@ class DuktapeConan(ConanFile):
         shutil.move("CMakeLists.txt", "%s/CMakeLists.txt" % self.source_root)
 
     def build(self):
-        cmake = CMake(self.settings)
         self.run("mkdir _build")
-        configure_command = 'cd _build && cmake ../%s %s' % (self.source_root, cmake.command_line)
-        self.run(configure_command)
-        self.run("cd _build && cmake --build . %s" % cmake.build_config)
+        cmake = CMake(self)
+        cmake.configure(source_dir=self.conanfile_directory, build_dir="./_build")
+        cmake.build()
 
     def package(self):
         self.copy(pattern="*.h", dst="include", src="%s/src" % self.source_root, keep_path=False)
