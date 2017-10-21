@@ -24,7 +24,7 @@ class DuktapeConan(ConanFile):
     def build(self):
         self.run("mkdir _build")
         cmake = CMake(self)
-        cmake.configure(source_dir=self.conanfile_directory, build_dir="./_build")
+        cmake.configure(source_dir=self.source_root, build_dir="./_build")
         cmake.build()
 
     def package(self):
