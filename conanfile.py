@@ -10,8 +10,8 @@ class DuktapeConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     exports = "CMakeLists.txt"
     generators = "cmake"
-    url="http://github.com/TyRoXx/conan-duktape"
-    license="MIT"
+    url = "http://github.com/TyRoXx/conan-duktape"
+    license = "MIT"
     source_root = "duktape-1.5.0"
 
     def source(self):
