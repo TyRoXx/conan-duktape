@@ -4,8 +4,8 @@ env:
      - CONAN_REFERENCE: "duktape/1.5.0"
      - CONAN_USERNAME: "conan"
      - CONAN_LOGIN_USERNAME: "tyroxx"
-     - CONAN_CHANNEL: "testing"
-     - CONAN_UPLOAD: "https://api.bintray.com/conan/conan-community/conan"
+     - CONAN_CHANNEL: "experimental"
+     - CONAN_UPLOAD: "https://api.bintray.com/conan/none2/duktape"
      - CONAN_STABLE_BRANCH_PATTERN: "release/*"
 
 linux: &linux
