@@ -6,18 +6,18 @@ from conans import CMake, ConfigureEnvironment
 
 class DuktapeConan(ConanFile):
     name = "duktape"
-    version = "1.5.0"
+    version = "2.2.0"
     settings = "os", "arch", "compiler", "build_type"
     exports = "CMakeLists.txt"
     generators = "cmake"
     url = "http://github.com/TyRoXx/conan-duktape"
     license = "MIT"
-    source_root = "duktape-1.5.0"
+    source_root = "duktape-2.2.0"
 
     def source(self):
-        zip_name = "duktape-1.5.0.tar.xz"
+        zip_name = "duktape-2.2.0.tar.xz"
         download("http://duktape.org/%s" % zip_name, zip_name)
-        check_sha256(zip_name, "7ed8838eb33b8a11433241c990bf9aa9803b7f4a1618eaf8fdb4c3a884e93ec0")
+        check_sha256(zip_name, "62f72206427633077cb02e7ccd2599ace4d254db409334593b86d262c0d50c14")
         self.run("cmake -E tar xf %s" % zip_name)
         shutil.move("CMakeLists.txt", "%s/CMakeLists.txt" % self.source_root)
 

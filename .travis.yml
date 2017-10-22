@@ -1,10 +1,10 @@
 
 env:
    global:
-     - CONAN_REFERENCE: "duktape/1.5.0"
+     - CONAN_REFERENCE: "duktape/2.2.0"
      - CONAN_USERNAME: "conan"
      - CONAN_LOGIN_USERNAME: "tyroxx"
-     - CONAN_CHANNEL: "experimental"
+     - CONAN_CHANNEL: "stable"
      - CONAN_UPLOAD: "https://api.bintray.com/conan/none2/duktape"
      - CONAN_STABLE_BRANCH_PATTERN: "release/*"
 
