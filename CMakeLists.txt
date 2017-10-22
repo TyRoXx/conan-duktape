@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
+include(conanbuildinfo.cmake)
+CONAN_BASIC_SETUP()
 project(duktape)
 include_directories(src)
 file(GLOB sources src/*.c)
