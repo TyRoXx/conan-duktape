@@ -7,4 +7,6 @@ CONAN_BASIC_SETUP()
 ADD_EXECUTABLE(duktapetest duktapetest.c)
 include_directories(${CONAN_INCLUDE_DIRS})
 target_link_libraries(duktapetest ${CONAN_LIBS})
-
+if(NOT MSVC)
+    target_link_libraries(duktapetest m)
+endif()
